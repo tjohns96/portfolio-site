@@ -12,3 +12,12 @@ if (navClose) {
     navMenu.classList.remove("show-menu");
   });
 }
+
+const navLink = document.querySelectorAll(".nav__link");
+
+function handleClickLink() {
+  navMenu.classList.remove("show-menu");
+}
+navLink.forEach((link) => {
+  link.addEventListener("click", handleClickLink);
+});
